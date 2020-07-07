@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd" >
+<struts>
+<package name="TestBigWork" extends="struts-default" namespace="/">
+<!-- 登录 -->
+		<action name="userAction" class="action.UsersAction">
+		    <result name="index">/index.jsp</result>
+			<result name="success">/student.jsp</result>
+			<result name="fail">/admin.jsp</result>
+			<!-- <result name="error">/error.jsp</result> -->
+		</action>		
+<!-- 查找	 -->	
+         <action name="Search" class="action.UsersAction" method="Search"> 
+		   <result name="SearchSuccess">/SearchSuccess.jsp</result>
+		</action> 
+		
+<!-- 修改密码 -->
+		<action name="AlterPwd" class="action.UsersAction" method="AlterPwd">
+		    <result name="AlterPwdSuccess">AlterPwdSuccess.jsp</result>
+		</action>
+		
+<!-- 修改用户信息 -->		
+		<action name="alterUser" class="action.UsersAction" method="alterUser">
+		    <result name="alterSuccess">/admin.jsp</result>
+		</action>	
+<!-- 增加用户信息 -->		
+		<action name="addUser" class="action.UsersAction" method="addUser">
+		  <result name="addSuccess">/admin.jsp</result>
+		</action>			
+<!-- 删除用户信息 -->		
+		<action name="deleteUser" class="action.UsersAction" method="deleteUser">
+		  <result name="deleteSuccess">/admin.jsp</result>
+		</action>
+			
+<!-- 修改毕业生基本信息 -->		
+		<action name="alterGraduate" class="action.UsersAction" method="alterGraduate">
+		    <result name="alterSuccess">/admin.jsp</result>
+		</action>
+<!-- 修改毕业生就业信息	 -->	
+		<action name="alterWork" class="action.UsersAction" method="alterWork">
+		   <result name="alterSuccess">/admin.jsp</result>
+		</action>
+
+<!-- 增加毕业生基本信息 -->		
+		<action name="addGraduate" class="action.UsersAction" method="addGraduate">
+		  <result name="addSuccess">/admin.jsp</result>
+		</action>
+<!-- 增加毕业生就业信息 -->		
+		<action name="addWork" class="action.UsersAction" method="addWork">
+		  <result name="addSuccess">/admin.jsp</result>
+		</action>		
+	</package>
+</struts>
